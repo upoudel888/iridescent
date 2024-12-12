@@ -1,5 +1,5 @@
 "use server";
-import connectMongoDB from "@/app/libs/mongodb";
+import connectMongoDB from "@/lib/mongodb";
 import Poem from "@/app/models/poem";
 import { revalidatePath } from "next/cache";
 
