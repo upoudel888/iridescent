@@ -17,7 +17,7 @@ export function Navbar() {
             <Link href={"/"}>Home</Link>
           </li>
           <li>
-            <Link href={"/"}>Poems</Link>
+            <Link href={"/poems"}>Poems</Link>
           </li>
         </ul>
         <div className="mode">
