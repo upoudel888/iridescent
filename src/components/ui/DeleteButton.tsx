@@ -1,6 +1,7 @@
 "use client";
 
 import { deletePoem } from "@/app/poems/actions";
+import { Button } from "./button";
 
 export function DeleteButton({ id }: { id: string }) {
   const handleDelete = (poemId: string) => {
@@ -8,12 +9,13 @@ export function DeleteButton({ id }: { id: string }) {
   };
 
   return (
-    <button
+    <Button
       onClick={() => {
         handleDelete(id);
       }}
+      variant={"destructive"}
     >
       Delete
-    </button>
+    </Button>
   );
 }

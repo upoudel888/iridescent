@@ -1,4 +1,6 @@
 import { poemType } from "../models/poem";
+import { DrawerDialog } from "./DrawerDialog";
+import { UpdatePoemForm } from "./forms";
 import { DeleteButton } from "./ui/DeleteButton";
 
 export function PoemLists({ poems }: { poems: poemType[] }) {
@@ -13,6 +15,13 @@ export function PoemLists({ poems }: { poems: poemType[] }) {
             <div>{poem.title}</div>
             <div className="whitespace-pre-line">{poem.verses}</div>
             <DeleteButton id={poem.id}></DeleteButton>
+            <DrawerDialog
+              drawerTitle={`Editing - ${poem.title}`}
+              description=""
+              buttonText="Edit"
+            >
+              <UpdatePoemForm poem={poem}></UpdatePoemForm>
+            </DrawerDialog>
           </div>
         );
       })}

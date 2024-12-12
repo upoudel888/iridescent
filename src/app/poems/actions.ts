@@ -1,7 +1,8 @@
 "use server";
 import connectMongoDB from "@/lib/mongodb";
-import Poem from "@/app/models/poem";
+import Poem from "@/models/poem";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 // create
 export async function addPoem(formData: FormData) {
@@ -12,7 +13,6 @@ export async function addPoem(formData: FormData) {
       verses: (formData.get("verses") as string) || "",
     });
     revalidatePath("/poems");
-    alert("added poem");
   } catch (error) {
     console.error("Error adding poem:", error);
   }
@@ -44,6 +44,8 @@ export async function updatePoem(formData: FormData) {
   } catch (error) {
     console.error("Error updating poem:", error);
     throw new Error("Failed to update poem.");
+  } finally {
+    redirect("/poems");
   }
 }
 

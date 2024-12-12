@@ -1,7 +1,7 @@
-import { AddPoemForm } from "@/app/components";
+import { AddPoemForm } from "@/components";
 import { getPoems } from "./actions";
-import { PoemLists } from "../components/PoemLists";
-import { poemType } from "../models/poem";
+import { PoemLists } from "@/components/PoemLists";
+import { poemType } from "@/models/poem";
 
 export default async function Poems() {
   const allPoems = await getPoems();

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer, Navbar } from "@/app/components";
+import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Iridescent | Poems by Ujjwal Paudel",
