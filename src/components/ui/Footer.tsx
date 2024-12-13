@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="container max-w-screen-2xl px-4 md:px-8 text-center flex flex-col bg-gray-200">
+      <div className="container max-w-screen-xl px-4 md:px-8 text-center flex flex-col">
         <div className="flex flex-col items-center">
           <div className="logo text-xl flex flex-row gap-2 mt-4">
             <span className="text-4xl">
@@ -19,7 +19,7 @@ export function Footer() {
             </span>
             <span className="leading-10">Iridescent</span>
           </div>
-          <div className="flex flex-row items-center justify-center gap-4 border-b-[1px] border-black py-4 w-full">
+          <div className="flex flex-row items-center justify-center gap-4 border-b-[1px] border-gray-400 py-4 w-full">
             <Link href="/" className={`${socialButtonStyles}`}>
               <FaFacebookF />
             </Link>

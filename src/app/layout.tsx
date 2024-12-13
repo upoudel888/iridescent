@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Lora.variable} min-h-screen flex flex-col justify-between`}
+        className={`${Lora.variable} min-h-screen flex flex-col justify-between bg-bgLight`}
       >
         <Navbar></Navbar>
         <div className="flex-1">{children}</div>
