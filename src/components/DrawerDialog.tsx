@@ -39,7 +39,7 @@ export function DrawerDialog({
   if (isDesktop) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
+        <DialogTrigger asChild className="flex-1">
           <Button variant="outline">{buttonText}</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
@@ -55,7 +55,7 @@ export function DrawerDialog({
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
+      <DrawerTrigger asChild className="w-full">
         <Button variant="outline">{buttonText}</Button>
       </DrawerTrigger>
       <DrawerContent className="px-4 md:px-8">

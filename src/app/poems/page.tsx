@@ -1,4 +1,4 @@
-import { AddPoemForm } from "@/components";
+import { PageBanner } from "@/components";
 import { getPoems } from "./actions";
 import { PoemLists } from "@/components/PoemLists";
 import { poemType } from "@/models/poem";
@@ -10,16 +10,18 @@ export default async function Poems() {
       id: poem.id,
       title: poem.title,
       verses: poem.verses,
+      createdAt: poem.createdAt,
     };
   });
 
   return (
-    <div className="w-full flex flex-col justify-center">
-      <div className="container max-w-screen-2xl px-4 md:px-8 flex flex-col justify-center items-center">
-        {/* TODO : show this form only for the admin */}
-        <AddPoemForm />
-        <PoemLists poems={poems}></PoemLists>
+    <>
+      <PageBanner pageTitle="Poems"></PageBanner>
+      <div className="flex w-full justify-center">
+        <div className="container flex max-w-screen-xl flex-col items-center justify-center px-4 py-14 md:px-8">
+          <PoemLists poems={poems}></PoemLists>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

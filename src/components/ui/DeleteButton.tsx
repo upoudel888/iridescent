@@ -14,6 +14,7 @@ export function DeleteButton({ id }: { id: string }) {
         handleDelete(id);
       }}
       variant={"destructive"}
+      className="flex-1"
     >
       Delete
     </Button>

@@ -21,8 +21,11 @@ body {
 
 @layer base {
   :root {
-    --primary: rgb(246, 211, 102);
+    --primaryMain: #fbb232;
+    --primaryMainLight: #f6c66b;
+    --primaryMainDark: #fa9004;
     --bgLight: #eff1e4;
+    --primaryDark: rgb(32, 32, 32);
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;

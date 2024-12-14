@@ -10,7 +10,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        golden: "var(--primary)",
+        primaryMain: "var(--primaryMain)",
+        primaryLight: "var(--primaryMainLight)",
+        primaryDark: "var(--primaryMainDark)",
         bgLight: "var(--bgLight)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

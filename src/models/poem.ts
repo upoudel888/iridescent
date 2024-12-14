@@ -4,6 +4,7 @@ export type poemType = {
   id: string;
   title: string;
   verses: string;
+  createdAt: Date;
   comments?: string[];
   likes?: string[];
 };
@@ -41,7 +42,7 @@ const poemSchema = new Schema(
       },
     ],
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const Poem = mongoose.models.Poem || mongoose.model("Poem", poemSchema);
