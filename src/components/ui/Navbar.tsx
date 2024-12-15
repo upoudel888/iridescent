@@ -4,15 +4,15 @@ import { MdOutlineLightMode } from "react-icons/md";
 
 export function Navbar() {
   return (
-    <nav className="w-full h-[4rem] flex justify-center">
-      <div className="container max-w-screen-xl px-4 md:px-8 flex flex-row items-center justify-between border-b-gray-400 border-b-[1px]">
-        <div className="logo w-1/3 text-xl flex flex-row gap-2">
-          <span className="text-4xl">
+    <nav className="flex h-[4rem] w-full justify-center">
+      <div className="container flex max-w-screen-xl flex-row items-center justify-between border-b-[1px] border-b-gray-400 px-4 md:px-8">
+        <Link href={"/"} className="logo flex w-1/3 flex-row gap-2 text-xl">
+          <span className="text-4xl text-primaryDark">
             <GiQuillInk />
           </span>
           <span className="leading-10">Iridescent</span>
-        </div>
-        <ul className="w-1/3 flex flex-row gap-8 justify-end items-center text-sm uppercase font-semibold">
+        </Link>
+        <ul className="flex w-1/3 flex-row items-center justify-end gap-8 text-sm font-semibold uppercase">
           <li>
             <Link href={"/"}>Home</Link>
           </li>
@@ -21,7 +21,7 @@ export function Navbar() {
           </li>
         </ul>
         <div className="mode">
-          <span className="text-2xl cursor-not-allowed">
+          <span className="cursor-not-allowed text-2xl">
             <MdOutlineLightMode />
           </span>
         </div>

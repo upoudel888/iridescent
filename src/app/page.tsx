@@ -24,7 +24,7 @@ function Hero() {
           <h1 className="text-xl font-semibold uppercase">
             Poems by Ujjwal Paudel
           </h1>
-          <h2 className="flex flex-col">
+          <h2 className="flex flex-col items-center justify-center md:items-start">
             <span className="font-barlow animated-text text-4xl font-bold lg:text-5xl xl:text-6xl">
               Where Words
             </span>
@@ -38,7 +38,8 @@ function Hero() {
           <Button
             title="Start Reading"
             size={"lg"}
-            className="flex flex-col bg-gradient-to-b from-[#fbb232] to-[#fa9004] text-black hover:bg-gradient-to-tl"
+            className="flex flex-col"
+            variant={"iridescent"}
           >
             <Link
               href={"/poems"}
